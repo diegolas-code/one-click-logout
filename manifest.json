@@ -1,0 +1,33 @@
+{
+	"action": {
+		"default_icon": {
+			"64": "icon.png",
+			"16": "icon16.png"
+		},
+		"default_popup": "popup.html"
+	},
+
+	"background": {
+		"service_worker": "background.js"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	],
+
+
+    
+	"description": "A Chrome extension to close all sessions for the specified sites with one click.",
+	"host_permissions": ["*://*/*"],
+	"icons": {
+		"64": "icon.png"
+	},
+
+	"manifest_version": 3,
+	"name": "One Click Logout",
+	"permissions": ["cookies", "notifications", "storage"],
+	"version": "0.9"
+}

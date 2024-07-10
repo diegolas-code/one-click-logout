@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>One Click Logout</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="head">
+			<div class="image"><img src="icon.png" /></div>
+			<div class="title">
+				<h1>One Click Logout</h1>
+			</div>
+		</div>
+
+		<button id="logout">Logout from all selected websites</button>
+		<div id="content-main">
+			<div class="options">
+				<h2>Websites to close session for:</h2>
+				<div id="site_list">
+					<ul></ul>
+					<p id="noValuesMessage" style="display: none">
+						No websites specified yet
+					</p>
+				</div>
+				<h3>Add or remove websites</h3>
+				<p class="note">
+					If website is already in the list it will be removed from
+					it.
+				</p>
+				<p id="errorMessage"></p>
+				<input
+					type="text"
+					name="site"
+					id="site"
+					placeholder="Enter domain name without 'www.'"
+				/>
+				<div class="add">
+					<button id="submit">&nbsp;Add / Remove&nbsp;</button>
+				</div>
+			</div>
+			<div class="foot">
+				<div>
+					<a href="#" id="go-about">About this extension</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content-about">
+			<div class="options">
+				<h2>About this extension</h2>
+				<p>
+					I created this extension for myself, to quickly log off from
+					social media sites when I need to focus on something.
+				</p>
+				<p>
+					The extension closes the sessions from the list of user-specified websites by
+					deleting their cookies.
+				</p>
+				<p>
+					<strong>Source code:</strong>
+					github.com/diegoasecas/one-click-logout
+				</p>
+				<p>
+					Based on the extension
+					<strong>Remove Cookies For Site</strong> by Nestor Urquiza
+					github.com/nestoru
+				</p>
+				Icons by Freepik / Flaticon
+			</div>
+
+			<div class="foot">
+				<div>
+					<a href="#" id="go-main">Go back</a>
+				</div>
+			</div>
+		</div>
+
+		<script src="content.js"></script>
+		<script src="background.js"></script>
+	</body>
+</html>
