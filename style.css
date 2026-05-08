@@ -88,6 +88,28 @@ a {
 	font-weight: bold;
 }
 
+.status {
+	min-height: 1.2em;
+	margin: 0.5em 0 0;
+	font-weight: 600;
+}
+
+.status.success {
+	color: #0b6f3a;
+}
+
+.status.error {
+	color: #8f1a1a;
+}
+
+.status.warning {
+	color: #8a5a00;
+}
+
+.status.info {
+	color: #0b4f6f;
+}
+
 .head {
 	display: flex;
 	align-items: center;

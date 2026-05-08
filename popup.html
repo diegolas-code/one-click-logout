@@ -28,7 +28,7 @@
 					If website is already in the list it will be removed from
 					it.
 				</p>
-				<p id="errorMessage"></p>
+				<p id="errorMessage" role="status" aria-live="polite"></p>
 				<input
 					type="text"
 					name="site"
@@ -76,7 +76,6 @@
 			</div>
 		</div>
 
-		<script src="content.js"></script>
-		<script src="background.js"></script>
+		<script type="module" src="src/popup.js"></script>
 	</body>
 </html>

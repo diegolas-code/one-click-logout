@@ -1,0 +1,12 @@
+{
+	"name": "one-click-logout",
+	"version": "0.9.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^30.0.0"
+	}
+}
