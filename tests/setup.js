@@ -1,3 +1,5 @@
+import { jest } from "@jest/globals";
+
 function createChromeMock() {
 	return {
 		storage: {

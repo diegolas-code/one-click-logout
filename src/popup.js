@@ -13,6 +13,15 @@ function setStatus(message, variant = "") {
 	status.className = variant ? `status ${variant}` : "status";
 }
 
+function showNotification(title, message) {
+	chrome.notifications.create({
+		type: "basic",
+		iconUrl: "icon.png",
+		title,
+		message,
+	});
+}
+
 function buildHostPermissions(domain) {
 	const origins = new Set();
 	origins.add(`*://${domain}/*`);
@@ -105,11 +114,20 @@ async function handleLogout(logoutButton) {
 		const failed = results.filter((item) => item.failedCount > 0).length;
 		if (failed > 0) {
 			setStatus("Some cookies could not be removed.", "warning");
+			showNotification(
+				"Logout completed",
+				"Some cookies could not be removed."
+			);
 		} else {
 			setStatus("All selected sessions have been closed.", "success");
+			showNotification(
+				"Logout Successful!",
+				"All selected sessions have been closed."
+			);
 		}
 	} catch (error) {
 		setStatus(error?.message || "Unable to clear cookies.", "error");
+		showNotification("Logout failed", error?.message || "Unable to clear cookies.");
 	} finally {
 		logoutButton.disabled = false;
 	}
@@ -128,6 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const goBackLink = document.getElementById("go-main");
 
 	contentAbout.style.display = "none";
+	logoutButton.disabled = true;
 
 	seeMoreLink.addEventListener("click", (event) => {
 		event.preventDefault();

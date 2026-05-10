@@ -20,6 +20,6 @@
 
 	"manifest_version": 3,
 	"name": "One Click Logout",
-	"permissions": ["cookies", "permissions", "storage"],
+	"permissions": ["cookies", "notifications", "permissions", "storage"],
 	"version": "0.9"
 }

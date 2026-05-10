@@ -5,6 +5,7 @@ import {
 	removeWebsite,
 	setWebsites,
 } from "../src/storage.js";
+import { jest } from "@jest/globals";
 
 describe("storage", () => {
 	test("getWebsites returns empty list when missing", async () => {
@@ -45,7 +46,7 @@ describe("storage", () => {
 
 	test("migrateLegacyWebsites moves data", async () => {
 		const legacyStorage = {
-			getItem: jest.fn(() => JSON.stringify(["example.com"])) ,
+			getItem: jest.fn(() => JSON.stringify(["example.com"])),
 			removeItem: jest.fn(),
 		};
 		chrome.storage.local.set.mockImplementation((value, cb) => cb());

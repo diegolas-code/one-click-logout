@@ -38,6 +38,7 @@ describe("popup", () => {
 	test("disables logout when no websites", async () => {
 		await import("../src/popup.js");
 		document.dispatchEvent(new Event("DOMContentLoaded"));
+		await Promise.resolve();
 
 		const logoutButton = document.getElementById("logout");
 		expect(logoutButton.disabled).toBe(true);

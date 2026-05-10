@@ -1,4 +1,5 @@
 import { createClearCookiesHandler } from "../src/background.js";
+import { jest } from "@jest/globals";
 
 describe("background handler", () => {
 	test("createClearCookiesHandler uses injected dependencies", async () => {
