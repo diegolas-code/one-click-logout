@@ -6,3 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 coverage/
+*.log
+dist/
+build/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.turbo/
+.pnpm-store/
+.idea/
+.env
+.env.*
