@@ -1,8 +1,9 @@
 {
 	"action": {
 		"default_icon": {
-			"64": "icon.png",
-			"16": "icon16.png"
+			"64": "icon_off.png",
+            "32": "icon_off.png",
+			"16": "icon_off.png"
 		},
 		"default_popup": "popup.html"
 	},
@@ -15,7 +16,9 @@
 	"description": "A Chrome extension to close all sessions for the specified sites with one click.",
 	"optional_host_permissions": ["*://*/*"],
 	"icons": {
-		"64": "icon.png"
+		"64": "icon_exit.png",
+		"32": "icon_exit.png",
+		"16": "icon_exit.png"
 	},
 
 	"manifest_version": 3,

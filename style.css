@@ -25,7 +25,40 @@ h3 {
 
 ul {
 	font-size: 1.15em;
-	padding-left: 1.5em;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.25em 0.5em;
+	border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+	border-bottom: none;
+}
+
+.delete-btn {
+	background-color: transparent;
+	border: none;
+	color: #8f1a1a;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 0 0.5em;
+	transition: 90ms;
+}
+
+.delete-btn:hover {
+	color: #ff0000;
+	transform: scale(1.1);
+}
+
+.delete-btn:active {
+	color: #610000;
 }
 
 input {

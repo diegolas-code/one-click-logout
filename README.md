@@ -27,9 +27,10 @@ Since this extension is in development, you can load it locally in Chrome:
 
 1. Click the **One Click Logout** icon in your browser toolbar.
 2. In the text input, enter the domain of a website you want to add (e.g., `facebook.com`, `linkedin.com`).
-3. Click **Add / Remove**.
+3. Click **Add**.
    - *Note: You may be prompted to grant permissions for the extension to access that specific site.*
-4. Once your list is ready, simply click the **Logout from all selected websites** button to clear sessions for everything in your list.
+4. To remove a website from the list, click the **×** button next to its name.
+5. Once your list is ready, simply click the **Logout from all selected websites** button to clear sessions for everything in your list.
 
 ## Development
 
